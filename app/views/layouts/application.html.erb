@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SecretDev</title>
+    <title>Secret of developer</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'angular' %>
   </head>
 
   <body>
+    <hello-angular>Loading...</hello-angular>
     <%= yield %>
   </body>
 </html>
