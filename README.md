@@ -1,24 +1,27 @@
-# README
+# SECRET OF DEV
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Teachnogogy
 
-Things you may want to cover:
 
-* Ruby version
+## How to run on development
+Make sure you install `yarn` and install all package dependent
 
-* System dependencies
+```
+yarn install
+```
 
-* Configuration
+Finally run 
+```
+bin/server
+```
 
-* Database creation
+Open your browser at: `localhost:3000`
 
-* Database initialization
 
-* How to run the test suite
+## Contributing
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Fork it star it! 
+2. Create your feature branch: git checkout -b my-new-feature
+3. Commit your changes: git commit -am 'Add some feature'
+4. Push to the branch: git push origin my-new-feature
+5. Submit a pull request to develop branch :D
