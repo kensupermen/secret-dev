@@ -36,6 +36,16 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'slim-rails'
+gem 'grape'
+gem 'roar'
+gem 'grape-roar'
+
+gem 'cancancan'
+gem 'grape-cancan'
+
+gem 'devise'
+gem 'devise_token_auth'
+gem 'omniauth-github'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
