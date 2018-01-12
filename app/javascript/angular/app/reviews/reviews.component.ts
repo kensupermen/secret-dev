@@ -4,9 +4,12 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-reviews',
   template: require('./reviews.component.html')
 })
+
 export class ReviewsComponent implements OnInit {
 
   constructor() { }
+
+  name = "King";
 
   ngOnInit() {
   }
