@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Http, Response } from '@angular/http'
 
 @Component({
   selector: 'app-reviews',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ReviewsComponent implements OnInit {
-  constructor() { }
+  data = [];
+  private apiUrl = 'http://localhost:3000/api/v1/companies';
 
-  name = "King";
+  constructor(private http: Http) {
+    this.getData()
+  }
+
+  getData() {
+    this.http.get(this.apiUrl).subscribe(res => {
+      console.log(res.json())
+      this.data = res.json()
+    })
+  }
 
   ngOnInit() {
   }
