@@ -4,11 +4,19 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import { ReviewsComponent } from './reviews/reviews.component';
 
+import {
+  HeaderComponent,
+  FooterComponent
+} from './shared'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ReviewsComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
