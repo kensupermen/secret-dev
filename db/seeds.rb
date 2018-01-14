@@ -6,5 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Company.create(name: 'FPT Software')
-Company.create(name: 'TMA Solution')
+company_1 = Company.create(name: 'FPT Software')
+company_2 = Company.create(name: 'TMA Solution')
+
+user = User.create(email: 'abc@gmail.com', password: '123456')
+
+Comment.create(company: company_1, user: user, messaage: 'That not good company')
+Comment.create(company: company_1, user: user, messaage: 'OT so much')
+Comment.create(company: company_2, user: user, messaage: 'This is a big company')
+
+

@@ -8,17 +8,16 @@ import { Http, Response } from '@angular/http'
 })
 
 export class ReviewsComponent implements OnInit {
-  companies = [];
-  private apiUrl = 'http://localhost:3000/api/v1/companies';
+  comments = [];
+  private apiUrl = 'http://localhost:3000/api/v1/companies/1/comments';
 
   constructor(private http: Http) {
-    this.getData()
+    this.getComments()
   }
 
-  getData() {
+  getComments() {
     this.http.get(this.apiUrl).subscribe(res => {
-      console.log(res.json())
-      this.companies = res.json()
+      this.comments = res.json()
     })
   }
 
