@@ -8,7 +8,7 @@ import { Http, Response } from '@angular/http'
 })
 
 export class ReviewsComponent implements OnInit {
-  data = [];
+  companies = [];
   private apiUrl = 'http://localhost:3000/api/v1/companies';
 
   constructor(private http: Http) {
@@ -18,7 +18,7 @@ export class ReviewsComponent implements OnInit {
   getData() {
     this.http.get(this.apiUrl).subscribe(res => {
       console.log(res.json())
-      this.data = res.json()
+      this.companies = res.json()
     })
   }
 
