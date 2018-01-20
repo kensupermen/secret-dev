@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import 'font-awesome/css/font-awesome.css'
 import AppHeader from '@/components/AppHeader';
 import AppFooter from '@/components/AppFooter';
 
