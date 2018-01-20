@@ -18,4 +18,13 @@ export default {
 </script>
 
 <style lang="scss">
+  .footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 5px;
+    background-color: #efefef;
+    text-align: center;
+  }
 </style>
