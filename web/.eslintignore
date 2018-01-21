@@ -4,3 +4,4 @@
 /*.js
 /src/*.vue
 /src/components/*.vue
+/src/store/*.js
