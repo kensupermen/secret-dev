@@ -11,8 +11,8 @@ company_2 = Company.create(name: 'TMA Solution')
 
 user = User.create(email: 'abc@gmail.com', password: '123456')
 
-Comment.create(company: company_1, user: user, messaage: 'That not good company')
-Comment.create(company: company_1, user: user, messaage: 'OT so much')
-Comment.create(company: company_2, user: user, messaage: 'This is a big company')
+Comment.create(company: company_1, user: user, message: 'That not good company')
+Comment.create(company: company_1, user: user, message: 'OT so much')
+Comment.create(company: company_2, user: user, message: 'This is a big company')
 
 
