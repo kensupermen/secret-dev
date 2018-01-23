@@ -3,7 +3,11 @@
     <input type="text" class="form-control" placeholder="Tim lang cua tui"/>
     <div>
       <h2>Companies</h2>
-      {{ allCompanies }}
+      <ul>
+        <li v-for="company in allCompanies">
+          {{ company.name }}
+        </li>
+      </ul>
     </div>
   </div>
 </template>
