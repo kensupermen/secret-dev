@@ -4,11 +4,6 @@ module Types
 
     field :id, types.Int
     field :name, types.String
-    field :comments, types.String do
-      description "All comments"
-      resolve ->(obj, args, ctx) {
-        obj.comments
-      }
-    end
+    field :comments, !types[CommentType]
   end
 end
