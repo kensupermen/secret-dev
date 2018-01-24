@@ -9,6 +9,10 @@ module V1
         company = Company.find params[:id]
         company.comments
       end
+
+      get 'search' do
+        Company.where('name like ?', "%#{params[:q]}%") if params[:q].present?
+      end
     end
   end
 end
