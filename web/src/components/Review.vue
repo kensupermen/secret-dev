@@ -6,17 +6,14 @@
     label="name"
     placeholder="Tim lang cua toi"
     :classes="{ input: 'form-control', wrapper: 'input-wrapper'}"
+    :onSelect="handleSelect"
     :on-select="getData">
   </autocomplete>
   <hr />
-  <pre v-if="preContent" :style="preStyle">
+  <pre v-if="comments.size > 0" :style="preStyle">
     <b>Selected Data:</b>
-    {{ preContent }}
+    {{ comments }}
   </pre>
-
-    <div>
-      <h2>Companies</h2>
-    </div>
   </div>
 </template>
 
@@ -32,7 +29,7 @@ export default {
   data() {
     return {
       companies: [],
-      preContent: "",
+      comments: [],
       preStyle: {
         background: "#f2f2f2",
         fontFamily: "monospace",
@@ -56,6 +53,14 @@ export default {
 
     getData(obj){
       console.log(obj);
+    },
+
+    handleSelect(data) {
+      axios.get('http://localhost:3000/api/v1/companies/' + data.id + '/comments')
+        .then((response) => {
+          this.comments = response.data
+        })
+      console.log(this.comments)
     }
   }
 }
