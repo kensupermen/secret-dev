@@ -14,17 +14,24 @@
     <b>Selected Data:</b>
     {{ comments }}
   </pre>
+
+  <comment></comment>
+
   </div>
 </template>
 
 <script>
 import Autocomplete from 'vue2-autocomplete-js';
 import axios from 'axios';
+import Comment from './Comment';
 
 export default {
   name: 'Review',
 
-  components: { Autocomplete },
+  components: {
+    Autocomplete,
+    Comment
+  },
 
   data() {
     return {
