@@ -1,14 +1,17 @@
 <template>
   <div>
-  <autocomplete
-    url="http://localhost:3000/api/v1/companies/search"
-    anchor="logo"
-    label="name"
-    placeholder="Tim lang cua toi"
-    :classes="{ input: 'form-control', wrapper: 'input-wrapper'}"
-    :onSelect="handleSelect"
-    :on-select="getData">
-  </autocomplete>
+    <div class="col-sm-4">
+      <autocomplete
+        url="http://localhost:3000/api/v1/companies/search"
+        anchor="logo"
+        label="name"
+        placeholder="Tim lang cua toi"
+        :classes="{ input: 'form-control', wrapper: 'input-wrapper'}"
+        :onSelect="handleSelect"
+        :on-select="getData">
+      </autocomplete>
+    </div>
+    <div class=""></div>
   <hr />
   <pre v-if="comments.size > 0" :style="preStyle">
     <b>Selected Data:</b>
@@ -62,12 +65,12 @@ export default {
       console.log(obj);
     },
 
-    handleSelect(data) {
-      axios.get('http://localhost:3000/api/v1/companies/' + data.id + '/comments')
+    handleSelect(company) {
+      // TODO: Tranfer company to comment component
+      axios.get('http://localhost:3000/api/v1/companies/' + company.id + '/comments')
         .then((response) => {
           this.comments = response.data
         })
-      console.log(this.comments)
     }
   }
 }
