@@ -5,7 +5,7 @@
         url="http://localhost:3000/api/v1/companies/search"
         anchor="logo"
         label="name"
-        placeholder="Tim lang cua toi"
+        placeholder="Tìm làng của tôi"
         :classes="{ input: 'form-control', wrapper: 'input-wrapper'}"
         :onSelect="handleSelect"
         :on-select="getData">
